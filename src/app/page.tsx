@@ -1,3 +1,17 @@
+import Header from "@/sections/Header";
+import Hero from "@/sections/Hero";
+import Intro from "@/sections/Intro";
+import Projects from "@/sections/Projects";
+import Testimonials from "@/sections/Testimonials";
+
 export default function Home() {
-  return <h1>Hello world</h1>;
+  return (
+    <div>
+      <Header />
+      <Hero/>
+      <Intro/>
+      <Projects/>
+      <Testimonials/>
+    </div>
+  );
 }
