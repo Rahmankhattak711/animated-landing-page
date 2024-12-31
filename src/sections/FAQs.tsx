@@ -29,7 +29,7 @@ const FAQs: FC = () => {
       <div className="container">
         <h2 className="text-4xl md:text-7xl lg:text-8xl">FAQs</h2>
         <div className="mt-10 md:mt-16 lg:mt-20">
-          {faqs.map(({ question, answer }) => (
+          {faqs.map(({ question }) => (
             <div
               key={question}
               className="border-t last:border-b border-stone-400  py-6 md:py-8 lg:py-10"
