@@ -31,16 +31,21 @@ const projects = [
 
 const Projects: FC = () => {
   return (
-    <section className="py-24 md:py-32 lg:py-40">
+    <section className="py-24 md:py-32 lg:py-40" id="projects">
       <div className="container">
         <h2 className="text-4xl md:text-7xl lg:text-8xl">Selected works</h2>
         <div className="mt-10 md:mt-16 lg:mt-20">
           {projects.map(({ name, image }) => (
-            <a href={"#"} key={name} className="border-t last:border-b border-stone-400 border-dotted py-6 md:py-8 lg:py-10 flex flex-col">
-              <div className="">
-               <div className="md:hidden">
-               <Image src={image} alt={name} className="w-full" />
-               </div>
+            <a
+              href={"#"}
+              key={name}
+              className="border-t last:border-b border-stone-400 border-dotted py-6 md:py-8 lg:py-10 flex flex-col relative group/project"
+            >
+              <div className="absolute bottom-0 left-0 w-full h-0 group-hover/project:h-full bg-stone-300 transition-all duration-500"></div>
+              <div className="relative ">
+                <div className="aspect-video md:hidden">
+                  <Image src={image} alt={name} className="w-full" />
+                </div>
                 <div className="mt-8 md:mt-0 flex justify-between items-center">
                   <h1 className="text-2xl md:text-3xl lg:text-4xl">{name}</h1>
                   <svg

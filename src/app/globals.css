@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.line{
+    @apply overflow-hidden
+}
+
+.word{
+    @apply translate-y-full
+}
