@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 export default function Button(
   props: {
-    varient: "primary" | "secondary" | "text";
+    varient: "primary" | "secondary" | "text" |"none";
     iconAfter?: ReactNode;
   } & ButtonHTMLAttributes<HTMLButtonElement>
 ) {
@@ -17,6 +17,7 @@ export default function Button(
           "border-2 border-orange-600 text-black hover:bg-orange-600 hover:text-white",
         varient === "text" &&
           "px-0  border-transparent after:transition-all  after:content-[''] after:h-px after:w-0 after:absolute after:top-full after:bg-orange-500 after:hover:w-full",
+          varient === "none" && "inline-flex items-center justify-center size-11 rounded-full border border-stone-500",
         className
       )}
       {...rest}
